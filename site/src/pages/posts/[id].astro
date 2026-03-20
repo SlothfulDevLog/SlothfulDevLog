@@ -1,0 +1,116 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const categoryLabels: Record<string, string> = {
+  devlog: 'Dev Log',
+  'body-mind': 'Body & Mind',
+  culture: 'Culture',
+  essays: 'Essays',
+  projects: 'Projects',
+};
+---
+
+<Base title={post.data.title} description={post.data.description}>
+  <article>
+    <header class="post-header">
+      <span class="post-category">
+        {categoryLabels[post.data.category] ?? post.data.category}
+      </span>
+      <h1>{post.data.title}</h1>
+      <time datetime={post.data.date.toISOString()}>
+        {post.data.date.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' })}
+      </time>
+    </header>
+
+    <div class="post-body">
+      <Content />
+    </div>
+
+    {post.data.tags && post.data.tags.length > 0 && (
+      <footer class="post-footer">
+        <div class="tags">
+          {post.data.tags.map(tag => (
+            <span class="tag">#{tag}</span>
+          ))}
+        </div>
+      </footer>
+    )}
+  </article>
+
+  <nav class="back">
+    <a href="/posts">&larr; All articles</a>
+  </nav>
+
+  <style>
+    .post-header {
+      padding: var(--space-lg) 0 var(--space-md);
+      border-bottom: 1px solid var(--color-border);
+      margin-bottom: var(--space-lg);
+    }
+
+    .post-category {
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-accent);
+      margin-bottom: var(--space-sm);
+    }
+
+    .post-header h1 {
+      margin-bottom: var(--space-xs);
+    }
+
+    .post-header time {
+      font-size: 0.85rem;
+      color: var(--color-muted);
+    }
+
+    .post-body {
+      font-size: 1.05rem;
+    }
+
+    .post-footer {
+      margin-top: var(--space-lg);
+      padding-top: var(--space-md);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+    }
+
+    .tag {
+      font-size: 0.8rem;
+      color: var(--color-muted);
+    }
+
+    .back {
+      margin-top: var(--space-xl);
+    }
+
+    .back a {
+      font-size: 0.9rem;
+      color: var(--color-muted);
+      text-decoration: none;
+    }
+
+    .back a:hover {
+      color: var(--color-text);
+    }
+  </style>
+</Base>

@@ -1,0 +1,96 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = 'SlothfulDevLog', description = '学び・実験・発見の記録' } = Astro.props;
+const pageTitle = title === 'SlothfulDevLog' ? title : `${title} — SlothfulDevLog`;
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a href="/" class="site-title">SlothfulDevLog</a>
+        <nav>
+          <a href="/posts">Articles</a>
+          <a href="/about">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; {new Date().getFullYear()} SlothfulDevLog</p>
+      </div>
+    </footer>
+
+    <style>
+      @import '../styles/global.css';
+
+      .site-header {
+        padding: var(--space-md) 0;
+        border-bottom: 1px solid var(--color-border);
+        margin-bottom: var(--space-lg);
+      }
+
+      .site-header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+
+      .site-title {
+        font-family: var(--font-heading);
+        font-size: 1.1rem;
+        text-decoration: none;
+        letter-spacing: 0.02em;
+      }
+
+      nav {
+        display: flex;
+        gap: var(--space-sm);
+      }
+
+      nav a {
+        font-size: 0.9rem;
+        text-decoration: none;
+        color: var(--color-muted);
+        transition: color 0.2s;
+      }
+
+      nav a:hover {
+        color: var(--color-text);
+      }
+
+      main {
+        min-height: 60vh;
+        padding-bottom: var(--space-xl);
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--color-border);
+        padding: var(--space-md) 0;
+      }
+
+      .site-footer p {
+        font-size: 0.8rem;
+        color: var(--color-muted);
+        margin: 0;
+      }
+    </style>
+  </body>
+</html>
