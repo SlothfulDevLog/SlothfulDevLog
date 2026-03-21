@@ -4,6 +4,7 @@ description: "日記を書いたらブログ記事になる──その仕組み
 date: 2026-03-21
 category: dev-log
 tags: [obsidian, claude-code, 自動化, vibecoding, ワークフロー]
+draft: false
 ---
 
 やっとできた。
