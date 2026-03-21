@@ -20,15 +20,15 @@ const categories = Object.keys(categoryLabels);
   <h1>Articles</h1>
 
   <div class="filters">
-    <a href="/posts" class="filter-tag active">All</a>
+    <a href="/posts" class="filter-tag" data-category="">All</a>
     {categories.map(cat => (
-      <a href={`/posts?category=${cat}`} class="filter-tag">{categoryLabels[cat]}</a>
+      <a href={`/posts?category=${cat}`} class="filter-tag" data-category={cat}>{categoryLabels[cat]}</a>
     ))}
   </div>
 
   <ul class="post-list">
     {allPosts.map((post) => (
-      <li>
+      <li data-category={post.data.category}>
         <a href={`/posts/${post.id}`} class="post-item">
           <div class="post-meta">
             <span class="post-category">{categoryLabels[post.data.category] ?? post.data.category}</span>
@@ -45,9 +45,34 @@ const categories = Object.keys(categoryLabels);
     ))}
   </ul>
 
-  {allPosts.length === 0 && (
-    <p class="empty">記事はまだありません。</p>
-  )}
+  <p class="empty" id="empty-msg" style="display:none">記事はまだありません。</p>
+
+  <script>
+    function applyFilter() {
+      const params = new URLSearchParams(window.location.search);
+      const current = params.get('category') ?? '';
+
+      // ボタンのactive切り替え
+      document.querySelectorAll<HTMLAnchorElement>('.filter-tag').forEach(el => {
+        el.classList.toggle('active', el.dataset.category === current);
+      });
+
+      // 記事の表示/非表示
+      const items = document.querySelectorAll<HTMLLIElement>('.post-list li');
+      let visible = 0;
+      items.forEach(li => {
+        const show = !current || li.dataset.category === current;
+        li.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+
+      const emptyMsg = document.getElementById('empty-msg');
+      if (emptyMsg) emptyMsg.style.display = visible === 0 ? '' : 'none';
+    }
+
+    applyFilter();
+    window.addEventListener('popstate', applyFilter);
+  </script>
 
   <style>
     h1 {
