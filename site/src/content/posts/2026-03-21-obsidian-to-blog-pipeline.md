@@ -2,7 +2,7 @@
 title: "ObsidianからブログへのパイプラインをついにAIで動かせた話"
 description: "日記を書いたらブログ記事になる──その仕組みをClaude Codeと一緒に作った記録"
 date: 2026-03-21
-category: dev-log
+category: devlog
 tags: [obsidian, claude-code, 自動化, vibecoding, ワークフロー]
 draft: false
 ---
