@@ -2,10 +2,26 @@
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
+  type?: string;
+  canonicalURL?: string;
 }
 
-const { title = 'SlothfulDevLog', description = '学び・実験・発見の記録' } = Astro.props;
+const {
+  title = 'SlothfulDevLog',
+  description = '学び・実験・発見の記録',
+  image,
+  type = 'website',
+  canonicalURL = Astro.url.href,
+} = Astro.props;
 const pageTitle = title === 'SlothfulDevLog' ? title : `${title} — SlothfulDevLog`;
+
+const siteBase = Astro.site?.toString().replace(/\/$/, '') ?? '';
+const ogImage = image
+  ? image.startsWith('http')
+    ? image
+    : `${siteBase}${image}`
+  : `${siteBase}/og-image.png`;
 ---
 
 <html lang="ja">
@@ -16,6 +32,25 @@ const pageTitle = title === 'SlothfulDevLog' ? title : `${title} — SlothfulDev
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+
+    <!-- Canonical -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- OGP -->
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content="SlothfulDevLog" />
+    <meta property="og:locale" content="ja_JP" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Slothfuldevlog" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
   </head>
   <body>
     <header class="site-header">

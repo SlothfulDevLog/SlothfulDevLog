@@ -9,6 +9,7 @@ const posts = defineCollection({
     date: z.coerce.date(),
     category: z.enum(['devlog', 'body-mind', 'culture', 'essays', 'projects']),
     tags: z.array(z.string()).optional(),
+    image: z.string().optional(),
     draft: z.boolean().default(false),
   }),
 });

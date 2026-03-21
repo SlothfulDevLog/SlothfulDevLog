@@ -22,7 +22,13 @@ const categoryLabels: Record<string, string> = {
 };
 ---
 
-<Base title={post.data.title} description={post.data.description}>
+<Base
+  title={post.data.title}
+  description={post.data.description}
+  image={post.data.image}
+  type="article"
+  canonicalURL={Astro.url.href}
+>
   <article>
     <header class="post-header">
       <span class="post-category">
