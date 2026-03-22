@@ -4,6 +4,7 @@ description: "記事を書いてgit pushすると、そのままXへの投稿文
 date: 2026-03-22
 category: devlog
 tags: [ClaudeCode, Vibecoding, X, 自動化, ブログ]
+image: "/images/posts/2026-03-22-obsidian-to-blog-to-x-pipeline.png"
 draft: false
 ---
 
