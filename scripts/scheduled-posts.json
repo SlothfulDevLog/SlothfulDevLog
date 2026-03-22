@@ -1,0 +1,32 @@
+[
+  {
+    "id": "2026-03-24-D",
+    "scheduledAt": "2026-03-24T08:03:00",
+    "text": "publishコマンド1つでここまで自動化できた\n\n1. 記事をMarkdownで整形\n2. サムネイル画像を生成\n3. git push\n4. X投稿文を3案生成\n\nコードは書いてない。全部Claude Codeに頼んだ。\n#Vibecoding #ClaudeCode #個人開発",
+    "posted": false
+  },
+  {
+    "id": "2026-03-24-B",
+    "scheduledAt": "2026-03-24T20:07:00",
+    "text": "AI画像生成のコスト比較をした\n\n・Nano Banana Pro: $0.134/枚\n・Imagen 4 Fast: $0.020/枚\n・GPT Image 1 Mini: $0.005/枚\n\n27倍の価格差がある。品質より用途で選ぶ時代になってる。\n#個人開発 #Vibecoding",
+    "posted": false
+  },
+  {
+    "id": "2026-03-25-E",
+    "scheduledAt": "2026-03-25T12:13:00",
+    "text": "ブランドらしさは「何を自動化しないか」で決まる気がしてきた。\n\nサムネイルを自動生成したら、きれいだけど「誰でもありそう」な画像になった。\n\n効率化すればするほど、個性が薄れる。そのバランスをどこで取るか、まだ答えが出ていない。\n#エッセイ #Vibecoding",
+    "posted": false
+  },
+  {
+    "id": "2026-03-24-scheduler-article",
+    "scheduledAt": "2026-03-24T18:07:00",
+    "text": "「あとで投稿しよう」は高確率で忘れる。\n\nだから自動化した。記事を書いたら投稿文も生成して、crontabで日時指定。Claude Codeを閉じても動く仕組み。\n\n手動でやってたことがまた一つなくなった。\nhttps://slothfuldevlog.com/posts/2026-03-23-x-post-scheduler\n#Vibecoding #ClaudeCode #個人開発",
+    "posted": false
+  },
+  {
+    "id": "2026-03-26-A",
+    "scheduledAt": "2026-03-26T08:17:00",
+    "text": "ブログ記事を書く → サムネイルが自動生成される → git pushまで全自動\n\nこれを$0.005/枚のAIで組んだ。月20記事書いても画像コストは20円。\n\n問題は「安い」じゃなくて「どこのブログにも使えてしまう画像」になること。自動化の限界を感じた。\n#Vibecoding #ClaudeCode",
+    "posted": false
+  }
+]
