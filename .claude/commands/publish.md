@@ -9,19 +9,48 @@
    - Markdownで本文を書く（ユーザーの素材・メモをベースに）
    - frontmatterを正しく書く
 
-2. **ファイルを作成する**
+2. **サムネイルを生成する**
+   - 初回のみ: `cd scripts && npm install && cd ..`
+   - 以下のコマンドで生成する:
+     ```
+     node scripts/generate-thumbnail.js "<タイトル>" "<説明>" "<カテゴリ>" "<slug>"
+     ```
+   - 生成された画像は `site/public/images/posts/<slug>.png` に保存される
+   - frontmatter の `image` フィールドに `/images/posts/<slug>.png` を設定する
+
+3. **ファイルを作成する**
    - ファイル名: `YYYY-MM-DD-slug.md`（slugは英小文字・ハイフン区切り）
    - 保存先: `site/src/content/posts/`
 
-3. **git push する**
+4. **git push する**
    ```
    git add site/src/content/posts/<ファイル名>
    git commit -m "記事追加: <タイトル>"
    git push
    ```
 
-4. **公開URLを伝える**
+5. **公開URLを伝える**
    - `https://slothfuldevlog.com/posts/<slug>`
+
+6. **X投稿文を生成する**
+   - 公開した記事の内容をもとに、X投稿案を3つ生成する
+   - 各案は280文字以内
+   - 記事URLとカテゴリ別ハッシュタグ（2〜3個）を含める
+   - ブランドボイス（力まない・本音・一緒に考える）で書く
+   - 案1: シンプル告知型 / 案2: 問いかけ型 / 案3: 発見・気づき共有型
+   - 3案を提示した後、「案1・案2・案3のどれを投稿しますか？（スキップする場合は「なし」）」と聞く
+   - 選ばれた案を以下のコマンドでXに投稿する（※初回のみ `cd scripts && npm install && cd ..` が必要）:
+     ```
+     node scripts/post-to-x.js "[投稿テキスト全文]"
+     ```
+   - 投稿成功後、ツイートURLを表示する
+
+   **カテゴリ別ハッシュタグ**:
+   - `devlog`: `#Vibecoding` `#ClaudeCode` `#個人開発`
+   - `body-mind`: `#パーソナルトレーナー` `#トレーニング` `#機能解剖学`
+   - `culture`: `#読書` `#美術` `#印象派`
+   - `essays`: `#エッセイ` `#気づき`
+   - `projects`: `#個人開発` `#プロジェクト`
 
 ## frontmatterの形式
 
@@ -32,6 +61,7 @@ description: "120文字以内の説明"
 date: YYYY-MM-DD
 category: devlog | body-mind | culture | essays | projects
 tags: [タグ1, タグ2]
+image: "/images/posts/<slug>.png"
 draft: false
 ---
 ```
