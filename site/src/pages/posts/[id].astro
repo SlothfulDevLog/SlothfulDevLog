@@ -40,6 +40,12 @@ const categoryLabels: Record<string, string> = {
       </time>
     </header>
 
+    {post.data.image && (
+      <div class="post-hero">
+        <img src={post.data.image} alt={post.data.title} />
+      </div>
+    )}
+
     <div class="post-body">
       <Content />
     </div>
@@ -82,6 +88,15 @@ const categoryLabels: Record<string, string> = {
     .post-header time {
       font-size: 0.85rem;
       color: var(--color-muted);
+    }
+
+    .post-hero {
+      margin-bottom: var(--space-lg);
+    }
+
+    .post-hero img {
+      width: 100%;
+      border-radius: 4px;
     }
 
     .post-body {
