@@ -1,11 +1,9 @@
 #!/usr/bin/env node
-/**
- * run-scheduled-posts.js
- * scheduled-posts.json を読み込み、時間が来た未投稿ツイートを投稿する
- *
- * crontab から5分ごとに呼び出される想定:
- *   */5 * * * * cd /Users/harukichi/SlothfulDevLog && node scripts/run-scheduled-posts.js >> /tmp/scheduled-posts.log 2>&1
- */
+// run-scheduled-posts.js
+// scheduled-posts.json を読み込み、時間が来た未投稿ツイートを投稿する
+//
+// crontab から5分ごとに呼び出される想定:
+// [*]/5 [*] [*] [*] [*] cd /Users/harukichi/SlothfulDevLog && node scripts/run-scheduled-posts.js >> /tmp/scheduled-posts.log 2>&1
 
 import { TwitterApi } from "twitter-api-v2";
 import { readFileSync, writeFileSync } from "fs";
