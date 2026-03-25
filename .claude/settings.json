@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "mcpServers": {
+    "obsidian": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@bitbonsai/mcpvault@latest",
+        "/Users/harukichi/Library/Mobile Documents/iCloud~md~obsidian/Documents/PKM"
+      ]
+    }
+  }
+}
