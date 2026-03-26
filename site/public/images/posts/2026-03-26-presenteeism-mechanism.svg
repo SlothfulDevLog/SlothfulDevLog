@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 360" width="680" height="360" font-family="'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif">
+
+  <!-- Background -->
+  <rect width="680" height="360" rx="12" fill="#0f1117"/>
+
+  <!-- Title -->
+  <text x="340" y="38" text-anchor="middle" fill="#e2e8f0" font-size="14" font-weight="600" letter-spacing="0.5">身体が仕事パフォーマンスを下げるメカニズム</text>
+
+  <!-- ===== Chain 1 ===== -->
+  <!-- Node: 猫背 -->
+  <rect x="30" y="68" width="110" height="48" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="85" y="87" text-anchor="middle" fill="#94a3b8" font-size="10">姿勢の問題</text>
+  <text x="85" y="106" text-anchor="middle" fill="#f1f5f9" font-size="13" font-weight="600">猫背</text>
+
+  <!-- Arrow -->
+  <line x1="140" y1="92" x2="162" y2="92" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="162,88 170,92 162,96" fill="#475569"/>
+
+  <!-- Node: 横隔膜 -->
+  <rect x="170" y="68" width="130" height="48" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="235" y="87" text-anchor="middle" fill="#94a3b8" font-size="10">横隔膜が締まる</text>
+  <text x="235" y="106" text-anchor="middle" fill="#f1f5f9" font-size="13" font-weight="600">呼吸が浅くなる</text>
+
+  <!-- Arrow -->
+  <line x1="300" y1="92" x2="322" y2="92" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="322,88 330,92 322,96" fill="#475569"/>
+
+  <!-- Node: 酸素供給 -->
+  <rect x="330" y="68" width="140" height="48" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="400" y="87" text-anchor="middle" fill="#94a3b8" font-size="10">脳への酸素供給</text>
+  <text x="400" y="106" text-anchor="middle" fill="#f1f5f9" font-size="13" font-weight="600">酸素量が低下 ↓</text>
+
+  <!-- Arrow down to merge -->
+  <line x1="400" y1="116" x2="400" y2="188" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- ===== Chain 2 ===== -->
+  <!-- Node: 僧帽筋 -->
+  <rect x="30" y="164" width="110" height="48" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="85" y="183" text-anchor="middle" fill="#94a3b8" font-size="10">筋肉の緊張</text>
+  <text x="85" y="202" text-anchor="middle" fill="#f1f5f9" font-size="13" font-weight="600">僧帽筋が硬直</text>
+
+  <!-- Arrow -->
+  <line x1="140" y1="188" x2="162" y2="188" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="162,184 170,188 162,192" fill="#475569"/>
+
+  <!-- Node: 椎骨動脈 -->
+  <rect x="170" y="164" width="130" height="48" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="235" y="183" text-anchor="middle" fill="#94a3b8" font-size="10">椎骨動脈が圧迫</text>
+  <text x="235" y="202" text-anchor="middle" fill="#f1f5f9" font-size="13" font-weight="600">脳血流が下がる</text>
+
+  <!-- Arrow -->
+  <line x1="300" y1="188" x2="322" y2="188" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="322,184 330,188 322,192" fill="#475569"/>
+
+  <!-- Node: 脳血流 -->
+  <rect x="330" y="164" width="140" height="48" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="400" y="183" text-anchor="middle" fill="#94a3b8" font-size="10">脳への血液循環</text>
+  <text x="400" y="202" text-anchor="middle" fill="#f1f5f9" font-size="13" font-weight="600">血流量が低下 ↓</text>
+
+  <!-- Arrow down -->
+  <line x1="400" y1="212" x2="400" y2="250" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Merge arrow -->
+  <line x1="470" y1="116" x2="490" y2="116" stroke="#475569" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="490" y1="116" x2="490" y2="270" stroke="#475569" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="490" y1="270" x2="468" y2="270" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="468,266 460,270 468,274" fill="#475569"/>
+
+  <!-- ===== Result Node ===== -->
+  <rect x="100" y="248" width="360" height="64" rx="10" fill="#1a1f36" stroke="#6366f1" stroke-width="2"/>
+  <text x="280" y="272" text-anchor="middle" fill="#a5b4fc" font-size="11" font-weight="500">集中力・判断力・生産性の低下</text>
+  <text x="280" y="296" text-anchor="middle" fill="#e2e8f0" font-size="16" font-weight="700" letter-spacing="1">プレゼンティーズム</text>
+
+  <!-- Left arrows converging to result -->
+  <line x1="85" y1="212" x2="85" y2="270" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="85" y1="270" x2="100" y2="270" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Label Chain 1 -->
+  <text x="20" y="62" fill="#64748b" font-size="10">経路①</text>
+  <!-- Label Chain 2 -->
+  <text x="20" y="158" fill="#64748b" font-size="10">経路②</text>
+
+  <!-- Footer note -->
+  <text x="340" y="340" text-anchor="middle" fill="#475569" font-size="10">© slothfuldevlog.com — 身体から見るプレゼンティーズム</text>
+
+</svg>
