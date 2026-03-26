@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 300" width="680" height="300" font-family="'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif">
+
+  <!-- Background -->
+  <rect width="680" height="300" rx="12" fill="#0f1117"/>
+
+  <!-- Title -->
+  <text x="340" y="34" text-anchor="middle" fill="#e2e8f0" font-size="14" font-weight="600" letter-spacing="0.5">収益化ロードマップ</text>
+
+  <!-- Timeline bar -->
+  <rect x="60" y="72" width="560" height="4" rx="2" fill="#1e293b"/>
+  <!-- Progress fill Phase 1 active -->
+  <rect x="60" y="72" width="186" height="4" rx="2" fill="#6366f1"/>
+
+  <!-- Phase markers on timeline -->
+  <circle cx="60" cy="74" r="6" fill="#6366f1"/>
+  <circle cx="246" cy="74" r="6" fill="#6366f1" stroke="#818cf8" stroke-width="2"/>
+  <circle cx="432" cy="74" r="6" fill="#334155" stroke="#475569" stroke-width="2"/>
+  <circle cx="620" cy="74" r="6" fill="#334155" stroke="#475569" stroke-width="2"/>
+
+  <!-- Date labels -->
+  <text x="60" y="95" text-anchor="middle" fill="#64748b" font-size="9">2026/3</text>
+  <text x="246" y="95" text-anchor="middle" fill="#818cf8" font-size="9">6月末</text>
+  <text x="432" y="95" text-anchor="middle" fill="#475569" font-size="9">9月末</text>
+  <text x="620" y="95" text-anchor="middle" fill="#475569" font-size="9">12月末</text>
+
+  <!-- ===== Phase 1 ===== -->
+  <rect x="40" y="108" width="196" height="148" rx="10" fill="#1a1f36" stroke="#6366f1" stroke-width="2"/>
+  <rect x="40" y="108" width="196" height="36" rx="10" fill="#2d3561"/>
+  <rect x="40" y="126" width="196" height="18" fill="#2d3561"/>
+
+  <text x="60" y="126" fill="#a5b4fc" font-size="11" font-weight="700">Phase 1</text>
+  <text x="138" y="126" text-anchor="middle" fill="#c7d2fe" font-size="10">〜 6月末</text>
+  <text x="60" y="143" fill="#818cf8" font-size="10">土台づくり</text>
+
+  <text x="60" y="168" fill="#94a3b8" font-size="11">📝 無料記事 24本</text>
+  <text x="60" y="188" fill="#94a3b8" font-size="11">👥 noteフォロワー 200人</text>
+  <text x="60" y="208" fill="#94a3b8" font-size="11">🐦 Xフォロワー 500人</text>
+  <text x="60" y="232" fill="#64748b" font-size="10">週3本投稿・すべて無料記事</text>
+  <text x="138" y="250" text-anchor="middle" fill="#6366f1" font-size="11" font-weight="600">¥0 → 収益化準備</text>
+
+  <!-- NOW badge -->
+  <rect x="172" y="112" width="40" height="18" rx="4" fill="#4f46e5"/>
+  <text x="192" y="124" text-anchor="middle" fill="white" font-size="9" font-weight="700">NOW</text>
+
+  <!-- ===== Phase 2 ===== -->
+  <rect x="246" y="108" width="186" height="148" rx="10" fill="#111827" stroke="#334155" stroke-width="1.5"/>
+  <rect x="246" y="108" width="186" height="36" rx="10" fill="#1c2333"/>
+  <rect x="246" y="126" width="186" height="18" fill="#1c2333"/>
+
+  <text x="266" y="126" fill="#94a3b8" font-size="11" font-weight="700">Phase 2</text>
+  <text x="339" y="126" text-anchor="middle" fill="#6b7280" font-size="10">7月〜 9月末</text>
+  <text x="266" y="143" fill="#6b7280" font-size="10">収益化スタート</text>
+
+  <text x="266" y="168" fill="#6b7280" font-size="11">📝 note記事 36本</text>
+  <text x="266" y="188" fill="#6b7280" font-size="11">👥 フォロワー 500人</text>
+  <text x="266" y="208" fill="#6b7280" font-size="11">💰 有料マガジン開始</text>
+  <text x="266" y="228" fill="#6b7280" font-size="11">💰 メンバーシップ開始</text>
+  <text x="339" y="250" text-anchor="middle" fill="#4b5563" font-size="11" font-weight="600">月収 30,000円 目標</text>
+
+  <!-- ===== Phase 3 ===== -->
+  <rect x="442" y="108" width="186" height="148" rx="10" fill="#111827" stroke="#334155" stroke-width="1.5"/>
+  <rect x="442" y="108" width="186" height="36" rx="10" fill="#1c2333"/>
+  <rect x="442" y="126" width="186" height="18" fill="#1c2333"/>
+
+  <text x="462" y="126" fill="#94a3b8" font-size="11" font-weight="700">Phase 3</text>
+  <text x="535" y="126" text-anchor="middle" fill="#6b7280" font-size="10">10月〜 12月末</text>
+  <text x="462" y="143" fill="#6b7280" font-size="10">拡大</text>
+
+  <text x="462" y="168" fill="#6b7280" font-size="11">📝 note記事 60本</text>
+  <text x="462" y="188" fill="#6b7280" font-size="11">👥 フォロワー 1,000人</text>
+  <text x="462" y="208" fill="#6b7280" font-size="11">🏢 法人・HR向け展開</text>
+  <text x="462" y="228" fill="#6b7280" font-size="11">📸 Instagram連動</text>
+  <text x="535" y="250" text-anchor="middle" fill="#4b5563" font-size="11" font-weight="600">月収 100,000円 目標</text>
+
+  <!-- Bottom note -->
+  <text x="340" y="284" text-anchor="middle" fill="#374151" font-size="10">収益化トリガー: noteフォロワー200人 or 6月末、どちらか早い方でPhase 2へ</text>
+
+</svg>
